@@ -12,7 +12,6 @@
 #include <string.h>
 #include "esp_log.h"
 #include "esp_wifi.h"
-//#include "nvs_flash.h"
 #include "esp_http_server.h"
 
 #define ESP_WIFI_SSID "esp_tutorial"
@@ -111,14 +110,6 @@ httpd_handle_t start_webserver(){
 void app_main(void)
 {
     printf("Hello tutorial!\n");
-    // Initialize NVS
-   // esp_err_t ret = nvs_flash_init();
-   // if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
-   // {
-    //    ESP_ERROR_CHECK(nvs_flash_erase());
-   //     ret = nvs_flash_init();
-   // }
-    //ESP_ERROR_CHECK(ret);
 
     ESP_LOGI(TAG, "ESP_WIFI_MODE_AP");
     printf("Event WIFI_EVENT_AP_STACONNECTED %d\n",WIFI_EVENT_AP_STACONNECTED);
