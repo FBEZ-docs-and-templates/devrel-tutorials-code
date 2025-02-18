@@ -5,6 +5,7 @@ Compared to the official hello_world example, this project removes all elements 
 
 This project can serve as a foundational starting point for step-by-step tutorials.
 
-> [!WARNING] To start the example, remember to set the target and select the flash port!
+> [!WARNING] 
+> To start the example, remember to set the target and select the flash port!
 
 
