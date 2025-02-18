@@ -5,11 +5,7 @@
  */
 
 #include <stdio.h>
-#include <inttypes.h>
 #include "sdkconfig.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include <string.h>
 #include "esp_log.h"
 #include "esp_wifi.h"
 #include "esp_http_server.h"
