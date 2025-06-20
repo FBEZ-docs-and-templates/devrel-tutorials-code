@@ -76,14 +76,12 @@ static esp_err_t hello_get_handler(httpd_req_t *req)
 }
 
 
-static const httpd_uri_t hello_world = {
+static const httpd_uri_t hello_world_uri= {
     .uri       = "/",
     .method    = HTTP_GET,
     .handler   = hello_get_handler,
     .user_ctx  = NULL
 };
-
-
 
 
 httpd_handle_t start_webserver(){
@@ -93,10 +91,9 @@ httpd_handle_t start_webserver(){
 
     if (httpd_start(&server, &config) == ESP_OK) {
         ESP_LOGI(TAG, "Server ok, registering the URI handlers...");
-        httpd_register_uri_handler(server, &hello_world);
-        // httpd_register_uri_handler(server, &echo);
-        // httpd_register_uri_handler(server, &ctrl);
-        // httpd_register_uri_handler(server, &any);
+        httpd_register_uri_handler(server, &hello_world_uri);
+        // To add additional route:
+        // httpd_register_uri_handler(server, &handler_function);
         return server;
     }
     ESP_LOGI(TAG, "Error starting server");
@@ -110,6 +107,7 @@ void app_main(void)
     ESP_LOGI(TAG, "ESP_WIFI_MODE_AP");
     printf("Event WIFI_EVENT_AP_STACONNECTED %d\n",WIFI_EVENT_AP_STACONNECTED);
     wifi_init_softap();
-    httpd_handle_t server = NULL;
-    server = start_webserver();
+    httpd_handle_t server = start_webserver();
+    // To stop it: 
+    //httpd_stop(server);
 }
