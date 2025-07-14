@@ -1,6 +1,6 @@
-## Assignment 2.1
+## Assignment 2.2
 
-This folder contains the code for the Assignment 2.1. 
+This folder contains the code for the Assignment 2.2. 
 
 
 ### Notes 
