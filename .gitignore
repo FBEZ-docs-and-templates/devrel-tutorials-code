@@ -109,3 +109,12 @@ XUNIT_RESULT*.xml
 
 # Vale
 .vale/styles/*
+
+# Ignore all .devcontainer folders
+**/.devcontainer/
+
+# Ignore all .gitignore files
+**/.gitignore
+
+# But keep the one in the root directory
+!/.gitignore
